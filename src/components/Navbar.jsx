@@ -40,11 +40,14 @@ const Center = styled.div`
 `;
 const Right = styled.div`
   flex: 1;
+  display: flex;
+  justify-content: flex-end;
 `;
 
 const MenuItem = styled.div`
-  font-size: 14px;
+  font-size: 1rem;
   cursor: pointer;
+  margin-left: 25px;
 `;
 const Navbar = () => {
   return (
@@ -54,17 +57,17 @@ const Navbar = () => {
           <Language>EN</Language>
           <SearchContainer>
             <Input />
-            <Search />
+            <Search style={{ color: 'gray', fontSize: '16px' }} />
           </SearchContainer>
         </Left>
         <Center>
           <Logo>GitEcom.</Logo>
         </Center>
         <Right>
-          <MenuItem>Register</MenuItem>
-          <MenuItem>Log In</MenuItem>
+          <MenuItem>REGISTER</MenuItem>
+          <MenuItem>LOG IN</MenuItem>
           <MenuItem>
-            <Badge badgeContent={0} color="primary">
+            <Badge badgeContent={4} color="primary">
               <ShoppingCartOutlined />
             </Badge>
           </MenuItem>
