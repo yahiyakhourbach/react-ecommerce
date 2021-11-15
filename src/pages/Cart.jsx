@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Anuncement from '../components/Anuncement';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
+import { mobile } from '../responsive';
 
 const Container = styled.div``;
 
@@ -13,6 +14,7 @@ const Title = styled.h1`
 
 const Wraper = styled.div`
   padding: 20px;
+  ${mobile({ padding: '10px' })}
 `;
 
 const Top = styled.div`
@@ -20,6 +22,7 @@ const Top = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  ${mobile({ padding: '1rem' })}
 `;
 
 const TopButton = styled.button`
@@ -31,6 +34,12 @@ const TopButton = styled.button`
   background-color: ${(props) =>
     props.fill === 'filled' ? 'black' : 'transparent'};
   color: ${(props) => (props.fill === 'filled' ? 'white' : 'black')};
+  ${mobile({
+    fontSize: '1rem',
+    width: '150px',
+    fontWeight: '300',
+    padding: '5px',
+  })}
 `;
 
 const TopTexts = styled.div``;
@@ -39,15 +48,18 @@ const TopText = styled.span`
   margin: 0px 10px;
   font-size: 1.2rem;
   text-decoration: underline;
+  ${mobile({ display: 'none' })}
 `;
 
 const Bottom = styled.div`
   display: flex;
   padding: 20px 10px;
+  ${mobile({ flexDirection: 'column' })}
 `;
 
 const Info = styled.div`
   flex: 3;
+  ${mobile({ flex: '2' })}
 `;
 
 const Summery = styled.div`
@@ -60,6 +72,7 @@ const Summery = styled.div`
   border-radius: 5px;
   margin: 0px 5px;
   flex: 1;
+  ${mobile({ height: '500px', flex: '3' })}
 `;
 
 const Product = styled.div`
@@ -67,6 +80,7 @@ const Product = styled.div`
   justify-content: space-between;
   padding: 0px 10px;
   margin: 10px 0px;
+  ${mobile({ flexDirection: 'column' })}
 `;
 
 const ProductDetials = styled.div`
@@ -79,6 +93,7 @@ const PriceDeials = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  ${mobile({ justifyContent: 'space-between', margin: '20px 5px' })}
 `;
 const AmountDetails = styled.div`
   display: flex;
@@ -140,6 +155,7 @@ const SummeryItem = styled.div`
   justify-content: space-between;
   font-size: 1.3rem;
   font-weight: ${(props) => props.type === 'total' && '600'};
+  ${mobile({ margin: '1rem' })}
 `;
 
 const SummaryText = styled.span``;

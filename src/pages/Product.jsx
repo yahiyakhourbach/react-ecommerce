@@ -4,20 +4,25 @@ import Anuncement from '../components/Anuncement';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
+import { mobile } from '../responsive';
 
 const Container = styled.div``;
 
 const Wrapper = styled.div`
   margin: 20px;
   display: flex;
+  ${mobile({ flexDirection: 'column' })}
 `;
 
 const ImageContainer = styled.div`
   margin-right: 20px;
   flex: 1;
+  ${mobile({ display: 'flex', justifyContent: 'center', marginRight: '0px' })}
 `;
 
-const Image = styled.img``;
+const Image = styled.img`
+  ${mobile({ width: '300px' })}
+`;
 
 const INfoProducts = styled.div`
   margin: 0px auto;
@@ -27,12 +32,14 @@ const INfoProducts = styled.div`
 const Title = styled.div`
   font-size: 2.4rem;
   font-weight: 100;
+  ${mobile({ fontSize: '1.4rem', marginTop: '20px' })}
 `;
 
 const Desc = styled.p`
   margin: 20px 0px;
   width: 700px;
   font-size: 1.3rem;
+  ${mobile({ width: '350px' })}
 `;
 
 const Price = styled.div`
@@ -44,6 +51,7 @@ const FilterContainer = styled.div`
   display: flex;
   width: 50%;
   justify-content: space-between;
+  ${mobile({ width: '100%', paddingRight: '10px' })}
 `;
 
 const Filter = styled.div`
@@ -89,6 +97,7 @@ const Amount = styled.div`
   border-radius: 5px;
   border: 1px solid #009acd;
   margin: 0px 5px;
+  ${mobile({ margin: '0px 10px' })}
 `;
 
 const RemoveAmount = styled.div``;
@@ -100,6 +109,7 @@ const Button = styled.button`
   cursor: pointer;
   font-weight: 500;
   width: 250px;
+  ${mobile({ width: '200px' })}
 `;
 const Product = () => {
   return (

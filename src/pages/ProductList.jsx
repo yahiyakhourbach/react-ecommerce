@@ -4,12 +4,14 @@ import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
 import Products from '../components/Products';
+import { mobile } from '../responsive';
 
 const Container = styled.div``;
 const FilterContainer = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 20px;
+  ${mobile({ flexDirection: 'column' })}
 `;
 const Title = styled.h1`
   margin: 20px;
@@ -17,10 +19,12 @@ const Title = styled.h1`
 const Filter = styled.div`
   display: flex;
   align-items: center;
+  ${mobile({ justifyContent: 'space-between', margin: '10px 0px' })}
 `;
 const FilterText = styled.div`
   font-size: 1.3rem;
   margin-right: 1rem;
+  ${mobile({ fontSize: '1rem' })}
 `;
 const Select = styled.select`
   margin-right: 20px;

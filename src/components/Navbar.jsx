@@ -2,9 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { Search, ShoppingCartOutlined } from '@material-ui/icons';
 import { Badge } from '@material-ui/core';
+import { mobile } from '../responsive';
 
 const Container = styled.div`
   height: 60px;
+  }
 `;
 const Wraper = styled.div`
   padding: 10px 20px;
@@ -16,10 +18,12 @@ const Left = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
+  ${mobile({ display: 'none' })}
 `;
 const Language = styled.span`
   font-size: 14px;
   cursor: pointer;
+  ${mobile({ display: 'none' })}
 `;
 const SearchContainer = styled.div`
   border: 0.5px solid lightgray;
@@ -39,7 +43,7 @@ const Center = styled.div`
   text-align: center;
 `;
 const Right = styled.div`
-  flex: 1;
+  flex: 2;
   display: flex;
   justify-content: flex-end;
 `;
@@ -48,6 +52,7 @@ const MenuItem = styled.div`
   font-size: 1rem;
   cursor: pointer;
   margin-left: 25px;
+  ${mobile({ marginLeft: '5px' })}
 `;
 const Navbar = () => {
   return (

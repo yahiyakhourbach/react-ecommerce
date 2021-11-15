@@ -1,6 +1,7 @@
 import { Send } from '@material-ui/icons';
 import React from 'react';
 import styled from 'styled-components';
+import { mobile } from '../responsive';
 
 const Container = styled.div`
   height: 60vh;
@@ -13,11 +14,13 @@ const Container = styled.div`
 const Title = styled.h1`
   font-size: 5rem;
   margin: 5px;
+  ${mobile({ fontSize: '4rem' })}
 `;
 const Desc = styled.div`
   font-size: 1.8rem;
   font-weight: 300;
   margin-bottom: 10px;
+  ${mobile({ fontSize: '1.5rem', textAlign: 'center' })}
 `;
 const InputContainer = styled.div`
   width: 50%;
@@ -26,6 +29,7 @@ const InputContainer = styled.div`
   display: flex;
   justify-content: space-between;
   border: 1px solid lightgray;
+  ${mobile({ width: '80%' })}
 `;
 const Input = styled.input`
   border: none;

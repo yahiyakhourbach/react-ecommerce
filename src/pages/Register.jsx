@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { mobile } from '../responsive';
 
 const Container = styled.div`
   background: linear-gradient(
@@ -18,6 +19,7 @@ const Wraper = styled.div`
   background-color: white;
   padding: 20px;
   width: 40%;
+  ${mobile({ width: '70%' })}
 `;
 
 const Title = styled.h1``;

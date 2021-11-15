@@ -8,11 +8,13 @@ import {
   Pinterest,
   Room,
 } from '@material-ui/icons';
+import { mobile } from '../responsive';
 
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 10px;
+  ${mobile({ flexDirection: 'column' })}
 `;
 const Left = styled.div`
   flex: 1;
